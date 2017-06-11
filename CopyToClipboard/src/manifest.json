@@ -9,7 +9,7 @@
   },
   "permissions": [
     "tabs",
-    "*://*.linkedin.com/*",
+    "*://*.linkedin.com/*"
     // "background",
     // "bookmarks",
     // "clipboardRead",
