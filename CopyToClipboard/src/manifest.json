@@ -10,24 +10,24 @@
   "permissions": [
     "tabs",
     "*://*.linkedin.com/*",
-    "background",
-    "bookmarks",
-    "clipboardRead",
-    "clipboardWrite",
-    "contentSettings",
-    "cookies",
-    "*://*.google.com/",
-    "debugger",
-    "history",
-    "idle",
-    "management",
-    "notifications",
-    "pageCapture",
-    "topSites",
-    "storage",
-    "webNavigation",
-    "webRequest",
-    "webRequestBlocking"
+    // "background",
+    // "bookmarks",
+    // "clipboardRead",
+    // "clipboardWrite",
+    // "contentSettings",
+    // "cookies",
+    // "*://*.google.com/",
+    // "debugger",
+    // "history",
+    // "idle",
+    // "management",
+    // "notifications",
+    // "pageCapture",
+    // "topSites",
+    // "storage",
+    // "webNavigation",
+    // "webRequest",
+    // "webRequestBlocking"
   ],
   "content_scripts": [
     {
@@ -35,7 +35,7 @@
         "*://*.linkedin.com/*"
       ],
       "js": [
-        "contentscript.bundle.js"
+        "index.bundle.js"
       ],
       "run_at": "document_end",
       "all_frames": false

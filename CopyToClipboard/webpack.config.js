@@ -16,7 +16,7 @@ if (fileSystem.existsSync(secretsPath)) {
 
 var options = {
   entry: {
-    contentscript: path.join(__dirname, "src", "scripts", "contentscript.js"),
+    index: path.join(__dirname, "src", "scripts", "index.js"),
   },
   chromeExtensionBoilerplate: {
     notHotReload: ["content_script"]
