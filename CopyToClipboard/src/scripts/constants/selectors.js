@@ -3,6 +3,8 @@ const Selectors = {
     RESULTS_HEADER: '.results-header',
     ACTIONS_CONTAINER: '.info-container.info-container-post-checkbox * div.actions',
     RESULT_LIST_CONTENT_WRAPPER: '.content-wrapper',
+    INFO_CONTAINER: '.info-container.info-container-post-checkbox',
+    MEMBER_ID: 'form.save-lead-container.action > input[type="hidden"]:nth-child(1)', 
     LINK_COPY: 'a.ctc-copy',
     BUTTON_COPY: 'button.ctc-copy',
     LIST_ITEM: 'li.result.loading.member',

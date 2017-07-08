@@ -3,7 +3,7 @@ import { Selectors } from '../constants';
 
 const htmlService = () => {
 
-    // Create html elements to be injected
+    // Inject header actions...
     var header = $(`
             <section class="ctc-header">
                 <div class="ctc-container ctc-container-header">
@@ -18,27 +18,39 @@ const htmlService = () => {
                 </div>
             </section>
         `);
+    $(Selectors.RESULTS_HEADER).after(header);
+
+    // Inject list item actions...
+    var actionsContainer = $(`
+            <section class="ctc-actions">
+            </section>
+        `);
     var copyButton = $(`
             <div class="ctc-container ctc-container-actions">
                 <span>Copy to clipboard:</span>
                 <span>
-                    <input type="checkbox" name="select" id="ctc-select">
+                    <input type="checkbox" name="select" id="ctc-select" class="ctc-select">
                     <label for="ctc-select" class="ctc-select disable-select">Select</label>
                 </span>
                 <span class="clickable">
                     <a class="ctc-copy">Copy</a>
                 </span>
-            </div>            
-        `);
-    var actionsContainer = $(`
-            <section class="ctc-actions">
-            </section>
+            </div>
         `);
     actionsContainer.append(copyButton);
-
-    // Append to page
     $(Selectors.RESULT_LIST_CONTENT_WRAPPER).append(actionsContainer);
-    $(Selectors.RESULTS_HEADER).after(header);
+
+    // Inject member Id
+    $('section.ctc-actions').each((index, el) => {
+        var section = $(el);
+        var memberId = section
+            .prev(Selectors.INFO_CONTAINER)
+            .find(Selectors.MEMBER_ID)
+            .val();
+        section.attr('id', memberId);
+        section.find('input.ctc-select').attr('id', `ctc-select-${memberId}`);
+        section.find('label.ctc-select').attr('for', `ctc-select-${memberId}`);
+    });
 }
 
 export default htmlService; 
