@@ -3,3 +3,42 @@
     /*white-space: nowrap;
     padding-left: 5px !important;*/
 }
+
+.ctc-header, .ctc-actions {
+    font-family: Source Sans Pro,Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.7);
+    font-size: 15px;
+    width: 100%;
+}
+
+.ctc-actions {
+    /*border-top: 1px solid #cccccc;*/
+    /*padding-top: 10px;*/
+    /*margin-top: 10px;*/
+}
+
+.ctc-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.25);
+    border-top: 0;
+    padding: 10px;
+}
+
+.ctc-container > span {
+    padding-right: 15px;
+}
+
+.ctc-container-actions {
+    padding: 0;
+    border: 0;
+    float: right;
+}
+
+label.ctc-select, label.ctc-select-all {
+    margin: 0;
+}

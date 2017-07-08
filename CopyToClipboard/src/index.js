@@ -12,7 +12,7 @@ import './scripts/contents.js';
 // });
 
 $(document).ready(() => {
-    console.log('Initializing copy to clipboard... XXX');
+    console.log('Initializing copy to clipboard...');
 
     setTimeout(() => {
         HtmlService();

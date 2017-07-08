@@ -3,7 +3,7 @@ import Clipboard from 'Clipboard';
 import { Selectors, Substitutes } from '../constants';
 
 const ClipboardService = () => {
-    var clipboard = new Clipboard(Selectors.BUTTON_COPY, {
+    var clipboard = new Clipboard(Selectors.LINK_COPY, {
         text: getText
     });
 
