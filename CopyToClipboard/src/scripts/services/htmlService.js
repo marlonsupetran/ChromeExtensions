@@ -21,24 +21,21 @@ const htmlService = () => {
     $(Selectors.RESULTS_HEADER).after(header);
 
     // Inject list item actions...
-    var actionsContainer = $(`
+    var actions = $(`
             <section class="ctc-actions">
+                <div class="ctc-container ctc-container-actions">
+                    <span>Copy to clipboard:</span>
+                    <span>
+                        <input type="checkbox" name="select" id="ctc-select" class="ctc-select">
+                        <label for="ctc-select" class="ctc-select disable-select">Select</label>
+                    </span>
+                    <span class="clickable">
+                        <a class="ctc-copy">Copy</a>
+                    </span>
+                </div>
             </section>
         `);
-    var copyButton = $(`
-            <div class="ctc-container ctc-container-actions">
-                <span>Copy to clipboard:</span>
-                <span>
-                    <input type="checkbox" name="select" id="ctc-select" class="ctc-select">
-                    <label for="ctc-select" class="ctc-select disable-select">Select</label>
-                </span>
-                <span class="clickable">
-                    <a class="ctc-copy">Copy</a>
-                </span>
-            </div>
-        `);
-    actionsContainer.append(copyButton);
-    $(Selectors.RESULT_LIST_CONTENT_WRAPPER).append(actionsContainer);
+    $(Selectors.RESULT_LIST_CONTENT_WRAPPER).append(actions);
 
     // Inject member Id
     $('section.ctc-actions').each((index, el) => {
