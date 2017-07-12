@@ -1,6 +1,6 @@
 {
   "name": "Copy to Clipboard",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "manifest_version": 2,
   "description": "Copies data from web pages to the clipboard.",
   "icons": {

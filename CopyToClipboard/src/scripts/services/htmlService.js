@@ -7,9 +7,9 @@ const htmlService = () => {
     var header = $(`
             <section class="ctc-header">
                 <div class="ctc-container ctc-container-header">
-                    <span>Copy to c lipboard:</span>
-                    <span>
-                        <input type="checkbox" name="select-all" id="ctc-select-all">
+                    <span>Copy to clipboard:</span>
+                    <span class="ctc-select-all">
+                        <input type="checkbox" name="select-all" id="ctc-select-all" class="ctc-select-all">
                         <label for="ctc-select-all" class="ctc-select-all disable-select">Select all</label>
                     </span>
                     <span class="clickable">
@@ -25,10 +25,10 @@ const htmlService = () => {
             <section class="ctc-actions">
                 <div class="ctc-container ctc-container-actions">
                     <span>Copy to clipboard:</span>
-                    <span>
-                        <input type="checkbox" name="select" id="ctc-select" class="ctc-select">
-                        <label for="ctc-select" class="ctc-select disable-select">Select</label>
-                    </span>
+                        <span class="ctc-select">
+                            <input type="checkbox" name="select" id="ctc-select" class="ctc-select" onchange="onSelect()">
+                            <label for="ctc-select" class="ctc-select disable-select">Select</label>
+                        </span>
                     <span class="clickable">
                         <a class="ctc-copy">Copy</a>
                     </span>
@@ -38,7 +38,7 @@ const htmlService = () => {
     $(Selectors.RESULT_LIST_CONTENT_WRAPPER).append(actions);
 
     // Inject member Id
-    $('section.ctc-actions').each((index, el) => {
+    $(Selectors.CTC_HEADER).each((index, el) => {
         var section = $(el);
         var memberId = section
             .prev(Selectors.INFO_CONTAINER)
@@ -50,4 +50,4 @@ const htmlService = () => {
     });
 }
 
-export default htmlService; 
+export default htmlService;

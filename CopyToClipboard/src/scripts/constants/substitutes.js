@@ -1,6 +1,6 @@
-const Substitutes = {
+const substitutes = {
     EMPTY: 'EMPTY',
     ERROR: 'ERROR'
 };
 
-export default Substitutes;
+export default substitutes;
