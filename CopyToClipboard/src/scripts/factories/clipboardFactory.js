@@ -9,14 +9,14 @@ const clipboardFactory = {
         cb.on('success', e => {
             console.info('Action:', e.action);
             console.info('Text:', e.text);
-            console.info('Trigger:', e.trigger);
+            // console.info('Trigger:', e.trigger);
 
             e.clearSelection();
         });
 
         cb.on('error', e => {
             console.error('Action:', e.action);
-            console.error('Trigger:', e.trigger);
+            // console.error('Trigger:', e.trigger);
         });
 
         return cb;

@@ -13,7 +13,7 @@ const htmlService = () => {
                         <label for="ctc-select-all" class="ctc-select-all disable-select">Select all</label>
                     </span>
                     <span class="clickable">
-                        <a class="ctc-copy-all" class="ctc-copy">Copy all</a>
+                        <a class="ctc-copy-all" class="ctc-copy">Copy selected</a>
                     </span>
                 </div>
             </section>
@@ -26,7 +26,7 @@ const htmlService = () => {
                 <div class="ctc-container ctc-container-actions">
                     <span>Copy to clipboard:</span>
                         <span class="ctc-select">
-                            <input type="checkbox" name="select" id="ctc-select" class="ctc-select" onchange="onSelect()">
+                            <input type="checkbox" name="select" id="ctc-select" class="ctc-select">
                             <label for="ctc-select" class="ctc-select disable-select">Select</label>
                         </span>
                     <span class="clickable">

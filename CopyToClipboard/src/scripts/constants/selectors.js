@@ -13,9 +13,9 @@ const selectors = {
     COMPANY: 'a.company-name.company-link, span.company-name',
     CTC_HEADER: 'section.ctc-actions',
     CTC_LINK_COPY: 'a.ctc-copy',
-    CTC_CHECKBOX_SELECT: 'section.ctc-select',
+    CTC_CHECKBOX_SELECT: 'input.ctc-select',
     CTC_LINK_COPY_ALL: 'a.ctc-copy-all',
-    CTC_CHECKBOX_SELECT_ALL: 'span.ctc-select-all',
+    CTC_CHECKBOX_SELECT_ALL: 'input.ctc-select-all',
 };
 
 export default selectors;

@@ -1,11 +1,11 @@
 import HtmlService from './htmlService';
 import CopyService from './copyService';
-import CopyAllService from './copyAllService';
-import onSelect from './eventService';
+import CopySelectedService from './copySelectedService';
+import JavascriptService from './javascriptService';
 
 export {
     HtmlService,
     CopyService,
-    CopyAllService,
-    onSelect
+    CopySelectedService,
+    JavascriptService
 };

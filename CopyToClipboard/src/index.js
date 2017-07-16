@@ -2,8 +2,8 @@ import $ from 'jquery';
 import { 
     HtmlService, 
     CopyService, 
-    CopyAllService, 
-    onSelect 
+    CopySelectedService, 
+    JavascriptService 
 } from './scripts/services';
 import './scripts/contents.js';
 
@@ -13,8 +13,8 @@ $(document).ready(() => {
     setTimeout(() => {
         HtmlService();
         CopyService();
-        CopyAllService();
-        onSelect();
+        CopySelectedService();
+        JavascriptService();
     }, 1000);
 
 });
