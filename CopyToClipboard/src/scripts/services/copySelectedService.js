@@ -31,13 +31,9 @@ const getAllText = trigger => {
         }
     });
 
-    if (lineCount)
+    if (!lineCount)
     {
-        alert(`Successfully copied ${lineCount} item${(lineCount > 1 && 's') || ''}.`);
-    }
-    else
-    {
-        alert(`There is nothing to copy. Please select at least one (1) item to copy.`);
+        alert(`You have not selected any items to copy!`);
     }
 
     return text;
